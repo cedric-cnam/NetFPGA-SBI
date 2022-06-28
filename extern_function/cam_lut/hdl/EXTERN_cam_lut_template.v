@@ -100,10 +100,6 @@ module @MODULE_NAME@
     // state machine signals
     reg [2:0]                   d_state, d_state_next;
     reg [2:0]                   lut_watchdog_cnt, lut_watchdog_cnt_next;
-  //reg [KEY_WIDTH-1:0]         key_fifo_r, key_fifo_r_next;
-  //reg [ADDRESS_WIDTH-1:0]     address_fifo_r, address_fifo_r_next;
-  //reg [VALUE_WIDTH-1:0]       newValue_fifo_r, newValue_fifo_r_next;
-  //reg [OP_WIDTH-1:0]          opCode_fifo_r, opCode_fifo_r_next;
     reg [VALUE_WIDTH-1:0]       result_r, result_r_next;
     reg                         match_r, match_r_next;
     reg                         valid_out, valid_out_next;
@@ -122,26 +118,7 @@ module @MODULE_NAME@
     wire                        res_valid_cam;
     wire                        res_null_cam;
     
-/*    // CAM signals (data plane only)
-    reg                         we_cam;
-    reg [ADDRESS_WIDTH-1:0]     addr_wr_cam, addr_wr_cam_r, addr_wr_cam_r_next;
-    reg [KEY_WIDTH-1:0]         din_cam;
-    wire                        busy_cam;
     
-    reg [KEY_WIDTH-1:0]         cmp_din_cam;
-    wire [2**ADDRESS_WIDTH-1:0] match_many_dummy, match_single_dummy;
-    wire                        match_cam;
-    wire [ADDRESS_WIDTH-1:0]    match_addr_cam;
-
-    // BRAM signals
-    reg                          d_we_bram;
-    reg                          d_en_bram;
-    reg  [ADDRESS_WIDTH-1:0]     d_addr_in_bram, d_addr_in_bram_r, d_addr_in_bram_r_next;
-    reg  [VALUE_WIDTH-1:0]       d_data_in_bram;
-    wire [VALUE_WIDTH-1:0]       d_data_out_bram;
-    wire [ADDRESS_WIDTH-1:0]     d_data_out_bram_dummy;
-*/
-
     //// Input buffer to hold requests ////
     fallthrough_small_fifo
     #(
