@@ -1,0 +1,5 @@
+Copyright (c) Mario Patetta, Conservatoire National des Arts et Métiers
+All rights reserved
+
+This project includes pieces of software under several different licenses.
+This file will include a list of copyright holders followed by all the related license texts.
