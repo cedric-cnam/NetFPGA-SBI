@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2022 Mario Patetta, Conservatoire National des Arts et Mètiers
+// Copyright (c) 2022 Mario Patetta, Conservatoire National des Arts et Metiers
 // All rights reserved.
 //
 // SBI_engine is free software: you can redistribute it and/or modify it under the terms of
