@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2022 Mario Patetta, Conservatoire National des Arts et Mètiers
+// Copyright (c) 2022 Mario Patetta, Conservatoire National des Arts et Metiers
 // Copyright (c) 2017 Stephen Ibanez
 // All rights reserved.
 //
