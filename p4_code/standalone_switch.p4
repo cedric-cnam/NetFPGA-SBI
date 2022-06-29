@@ -71,7 +71,7 @@
 //-----------------------------------
 
 /*************************************************************************
-							E X T E R N S 
+				 E X T E R N S 
 *************************************************************************/
 
 // hash function
@@ -100,7 +100,7 @@ extern void dist_reg_raw(in bit<3> index,
 
 
 /*************************************************************************
-							M E T A D A T A 
+				 M E T A D A T A 
 *************************************************************************/
 
 // user defined metadata: can be used to share information between
@@ -116,7 +116,7 @@ struct digest_data_t {
 
 
 /*************************************************************************
-							P A R S E R 
+				 P A R S E R 
 *************************************************************************/
 
 @Xilinx_MaxPacketRegion(8192)
@@ -187,7 +187,7 @@ parser TopParser(packet_in b,
 
 
 /*************************************************************************
-				M A T C H - A C T I O N    P I P E L I N E  
+		M A T C H - A C T I O N    P I P E L I N E  
 *************************************************************************/
 
 control TopPipe(inout Parsed_packet p,
@@ -214,16 +214,12 @@ control TopPipe(inout Parsed_packet p,
 
     apply {
         unused_table.apply();
-          
-        /*************************************************************************
-				        S T A N D A L O N E    T C P    M O N I T O R        
-        *************************************************************************/
         
-	    // metadata for register accesses
-	    bit<32>	newVal = 0;
-	    bit<32>	incVal = 0;
-	    bit<8>	Reg_opCode = REG_READ;
-	    bit<3>	index = 0;
+	// metadata for register accesses
+	bit<32>	newVal = 0;
+	bit<32>	incVal = 0;
+	bit<8>	Reg_opCode = REG_READ;
+	bit<3>	index = 0;
 
         if (p.tcp.isValid()) { 
             
@@ -291,8 +287,8 @@ control TopPipe(inout Parsed_packet p,
             }
         }
         
-	    // access the distribution register
-	    bit<32> result = 0;
+	// access the distribution register
+	bit<32> result = 0;
         if ( p.SB_query.isValid() || p.tcp.isValid() )  {
             dist_reg_raw(index, newVal, incVal, Reg_opCode, result);
         }
@@ -309,10 +305,10 @@ control TopPipe(inout Parsed_packet p,
 // Deparser Implementation
 @Xilinx_MaxPacketRegion(8192)
 control TopDeparser(packet_out b,
-                    in Parsed_packet p,
-                    in user_metadata_t user_metadata,
-                    inout digest_data_t digest_data, 
-                    inout sume_metadata_t sume_metadata) { 
+        in Parsed_packet p,
+        in user_metadata_t user_metadata,
+        inout digest_data_t digest_data, 
+        inout sume_metadata_t sume_metadata) { 
     apply {
         b.emit(p.ethernet);         
         b.emit(p.ip);
