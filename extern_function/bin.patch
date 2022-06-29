@@ -1,0 +1,36 @@
+//
+// Copyright (c) 2022 Mario Patetta, Conservatoire National des Arts et Metiers
+// All rights reserved.
+//
+// SBI_engine is free software: you can redistribute it and/or modify it under the terms of
+// the GNU Affero General Public License as published by the Free Software Foundation, either 
+// version 3 of the License, or any later version.
+//
+// SBI_engine is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+// without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+// See the GNU Affero General Public License for more details.
+//
+// You should have received a copy of the GNU Affero General Public License along with this program.
+// If not, see <https://www.gnu.org/licenses/>.
+//
+
+diff -Naur bin/extern_data.py bin_new/extern_data.py
+--- bin/extern_data.py	2022-06-29 15:50:20.438579720 +0200
++++ bin_new/extern_data.py	2022-06-29 15:55:55.707492850 +0200
+@@ -129,6 +129,16 @@
+                                 "@NUM_SHIFT_REGS@" : "annotation(ShiftRegCount)"}
+ },
+ 
++
++"cam_lut": {"hdl_template_file": "externs/cam_lut/hdl_tcam/EXTERN_cam_lut_template.v",
++            "replacements": {"@EXTERN_NAME@" : "extern_name",
++                             "@MODULE_NAME@" : "module_name",
++                             "@PREFIX_NAME@" : "prefix_name",
++                             "@KEY_WIDTH@" : "annotation(CamLutKeyWidth)",
++                             "@ADDRESS_WIDTH@" : "annotation(CamLutAddressWidth)",
++                             "@VALUE_WIDTH@" : "annotation(CamLutNewValWidth)"}
++}
++
+ }
+ 
+ 
