@@ -7,7 +7,7 @@ included in this project will include the respective license notices.
 
 - NetFPGA, HARDWARE-SOFTWARE LICENSE based on the Apache Software License.
 - Dmitry Matyunin, MIT license.
-- Mario Patetta, GNU Public License.
+- Mario Patetta, GNU General Public License.
 
 ******************************************************************************************************************
 
