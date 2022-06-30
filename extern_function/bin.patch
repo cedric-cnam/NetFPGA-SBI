@@ -22,7 +22,7 @@ diff -Naur bin/extern_data.py bin_new/extern_data.py
  },
  
 +
-+"cam_lut": {"hdl_template_file": "externs/cam_lut/hdl_tcam/EXTERN_cam_lut_template.v",
++"cam_lut": {"hdl_template_file": "externs/cam_lut/hdl/EXTERN_cam_lut_template.v",
 +            "replacements": {"@EXTERN_NAME@" : "extern_name",
 +                             "@MODULE_NAME@" : "module_name",
 +                             "@PREFIX_NAME@" : "prefix_name",
