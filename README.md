@@ -4,7 +4,7 @@ This work is aimed at enhancing the P4->NetFPGA project by enabling the implemen
 
 In order to make use of the contents of this repository, one should first gain access to the P4->NetFPGA github repository and perform the initial setup as described [here](https://github.com/NetFPGA/P4-NetFPGA-public/wiki/Getting-Started).
 
-## Steps for integrating our contribution in the P4-NetFPGA Workflow
+## Steps for integrating our contribution in the P4->NetFPGA Workflow
 
 1. Create a new P4 project named standalone_switch by running `$ $SUME_SDNET/bin/make_new_p4_proj.py standalone_switch`. This will create a template project in `$SUME_SDNET/projects/`.
 2. Update `$SUME_FOLDER/tools/settings.sh` in order to set the `P4_PROJECT_NAME` environment variable to `standalone_switch`.
