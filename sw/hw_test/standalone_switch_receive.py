@@ -35,6 +35,7 @@ import os, sys, re, cmd, subprocess, shlex, time
 from threading import Thread
 
 sys.path.append(os.path.expandvars('$P4_PROJECT_DIR/testdata/'))
+sys.path.append(os.path.expandvars('${SUME_SDNET}/bin'))
 from southbound_headers import *
 from nf_sim_tools import *
 
