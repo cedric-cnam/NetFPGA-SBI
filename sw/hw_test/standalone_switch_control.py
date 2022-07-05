@@ -37,6 +37,7 @@ import random, socket, struct
 import numpy as np
 
 sys.path.append(os.path.expandvars('$P4_PROJECT_DIR/testdata/'))
+sys.path.append(os.path.expandvars('${SUME_SDNET}/bin'))
 from nf_sim_tools import *
 from southbound_headers import *
 
